@@ -1,9 +1,14 @@
 var draw = document.getElementById("my_draw");
-var my_canvas = draw.getContext("2d");
+var myCanvas = draw.getContext("2d");
 
-my_canvas.beginPath();
-my_canvas.strokeStrike = "red";
-my_canvas.moveTo(100, 100);
-my_canvas.lineTo(200, 200);
-my_canvas.stroke();
-my_canvas.closePath();
+drawingLine("red", 20, 300, 220, 10);
+drawingLine("blue", 310, 10, 10, 220);
+
+function drawingLine(color, xinitial, yinitial, xfinal, yfinal) {
+  myCanvas.beginPath();
+  myCanvas.strokeStyle = color;
+  myCanvas.moveTo(xinitial, yinitial);
+  myCanvas.lineTo(xfinal, yfinal);
+  myCanvas.stroke();
+  myCanvas.closePath();
+}
