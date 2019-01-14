@@ -1,3 +1,7 @@
+var text = document.getElementById(nLines);
+var myBoton = document.getElementById(boton);
+boton.addEventListener("click", drawByClick);
+
 var draw = document.getElementById("my_draw");
 var myCanvas = draw.getContext("2d");
 var lines = 30;
@@ -32,4 +36,8 @@ function drawingLine(color, xinitial, yinitial, xfinal, yfinal) {
   myCanvas.lineTo(xfinal, yfinal);
   myCanvas.stroke();
   myCanvas.closePath();
+}
+
+function drawByClick() {
+  alert("Don't touch me there!")
 }
